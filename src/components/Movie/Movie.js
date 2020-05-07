@@ -1,2 +1,2 @@
 import React from 'react'
-import {} from 
+import {API_URL,API_KEY} from './../../config'
