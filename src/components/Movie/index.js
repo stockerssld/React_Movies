@@ -77,6 +77,7 @@ export function Movie(props){
                         }
                     </FourColGrid>
                 </RmdbMovieGrid>
+                :null
             }
            {!actors && !loading ? <h1>No movie found</h1>:null} 
            {loading? <Spinner/>:null}
