@@ -18,7 +18,7 @@ const Animatemovieinfo = keyframes`
         opacity: 1;
     }
 `
-const RmdbMovieinfoContent = styled.div`
+export const RmdbMovieinfoContent = styled.div`
     max-width: 1280px;
     width: 100%;
     height: 100%;
@@ -26,14 +26,14 @@ const RmdbMovieinfoContent = styled.div`
     background: rgb(0,0,0,0.7);
     position: relative;
 `
-const RmdbMovieintoThumb= styled.div`
+export const RmdbMovieintoThumb= styled.div`
     width: 350px;
     height: 100%;
     overflow: hidden;
     position: absolute;
     left: 0px;
 `
-const RmdbMovieinfoText = styled.div`
+export const RmdbMovieinfoText = styled.div`
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     width: auto;
