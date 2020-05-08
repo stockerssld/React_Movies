@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {RmdbGrid,RmdbGridContent,RmdbGridElements} from './FourColGrod'
 
-export const FourColGrid =({header, loading, children})=>{
+const FourColGrid =({header, loading, children})=>{
     const renderElements=()=>{
         const gridElements = children.map((element, i)=>(
             <RmdbGridElements key={i}>
@@ -21,7 +21,7 @@ export const FourColGrid =({header, loading, children})=>{
         </RmdbGrid>
     )
 }
-
+export default FourColGrid
 FourColGrid.propTypes={
     header: PropTypes.string,
     loading: PropTypes.bool

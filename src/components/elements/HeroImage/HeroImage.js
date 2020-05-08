@@ -1,15 +1,7 @@
 import styled,{keyframes} from 'styled-components'
 
-export const RmdbHeroImage = styled.div`
-    background-size: 100%, cover !important;
-    background-position: center, center !important;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    animation: ${AnimateHeroImage} 1s;
-`
 
-const AnimateHeroImage = keyframes`
+const animateHeroImage = keyframes`
     from {
         opacity: 0;
     }
@@ -17,6 +9,15 @@ const AnimateHeroImage = keyframes`
         opacity: 1;
     }
 `
+export const RmdbHeroImage = styled.div`
+    background-size: 100%, cover !important;
+    background-position: center, center !important;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: ${animateHeroImage} 1s;
+`
+
 export const RmdbHeroimageContent = styled.div`
     max-width: 1280px;
     padding: 20px;

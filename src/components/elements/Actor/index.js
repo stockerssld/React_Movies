@@ -3,7 +3,7 @@ import {IMAGE_BASE_URL} from './../../../config'
 import PropTypes from 'prop-types'
 import { RmbdActor,RmdbActorCharacter,RmdbActorName } from './Actor'
 
-export const Actor =({actor})=>{
+const Actor =({actor})=>{
     const POSTER_SIZE='w154';
 
     return(
@@ -19,3 +19,4 @@ export const Actor =({actor})=>{
 Actor.prototype={
     actor: PropTypes.object
 }
+export default Actor

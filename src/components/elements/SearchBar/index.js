@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 
 import {RmdbFaSearch,RmdbSearchbarInput,RmdbSerachbarContent,RmdbSerchBar} from './SearchBar'
 
-let intialState={}
-export function SearchBar(props){
+let intialState={
+    value:''
+}
+function SearchBar(props){
 
-    [state, setState]= useState(intialState)
-    timeout = null
+    const [state, setState]= useState(intialState)
+    const timeout = null
     const doSearch =(e)=>{
         const value = e.target.value
         setState({value})
@@ -16,7 +18,7 @@ export function SearchBar(props){
             props.callback(value)
         }, 500)
     }
-
+    const {value}=state
     return(
         <RmdbSerchBar>
             <RmdbSerachbarContent>
@@ -26,7 +28,8 @@ export function SearchBar(props){
         </RmdbSerchBar>
     )
 }
+export default SearchBar
 
 SearchBar.propTypes = {
-    callback:PropTypees.func
+    callback:PropTypes.func
 }

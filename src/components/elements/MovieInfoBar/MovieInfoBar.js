@@ -28,7 +28,11 @@ export const RRmdbMovieInfoBarInfo = styled.span`
     padding: 5px 0 0 10px;
     float: left;
 `
-export const FaTime, FaRevenue= styled(FontAwesome)`
+export const FaTime= styled(FontAwesome)`
+    float: left;
+    margin-top: -4px;
+`
+export const FaRevenue= styled(FontAwesome)`
     float: left;
     margin-top: -4px;
 `

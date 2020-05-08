@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 import {Provider} from 'react-redux'
@@ -14,9 +14,10 @@ const storeWithMiddlere = applyMiddleware(promiseModdleware)(createStore)
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={storeWithMiddlere(rootReducer)}>
-      <App />
-    </Provider>
+    {/* <Provider store={storeWithMiddlere(rootReducer)}>
+    </Provider> */}
+    <App />
+
   </React.StrictMode>,
   document.getElementById('root')
 );

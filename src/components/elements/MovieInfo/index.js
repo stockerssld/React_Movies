@@ -1,9 +1,9 @@
 import React from 'react'
 import {API_KEY,API_URL,BACKDROP_SIZE,IMAGE_BASE_URL,POSTER_SIZE} from './../../../config'
-import PropoTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import  {FaFilm,Meter,RmdbDirector,RmdbMovieinfo,RmdbRating,RmdbScore,RmdbMovieinfoContent,RmdbMovieinfoText,RmdbMovieintoThumb} from './MovieInfo'
 import MovieThumb from './../MovieThumb'
-export const MovieInfo=({movie, directors})=>(
+const MovieInfo=({movie, directors})=>(
     <RmdbMovieinfo style={{background: movie.backdrop_path? `url('${IMAGE_BASE_URL}${BACKDROP_SIZE}${movie.backdrop_path})`: '#000'}}>
         <RmdbMovieinfoContent>
             <RmdbMovieintoThumb>
@@ -39,3 +39,4 @@ MovieInfo.propTypes={
     movie: PropTypes.object,
     directors: PropTypes.array
 }
+export default MovieInfo

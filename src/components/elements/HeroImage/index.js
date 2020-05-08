@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {RmdbHeroImage,RmdbHeroimageContent,RmdbHeroimageText} from './HeroImage'
 
 
-export const HeroImage=({image, title, text})=>(
+const HeroImage=({image, title, text})=>(
     <RmdbHeroImage
         style={{background:`
             linear-gradient(to bottom, rgba(0,0,0,0)
@@ -13,12 +13,12 @@ export const HeroImage=({image, title, text})=>(
             url('${image}'), #1c1c1c
         `}}
     >
-        <rmdbHeroimageContent>
+        <RmdbHeroimageContent>
             <RmdbHeroimageText>
                 <h1>{title}</h1>
                 <p>{text}</p>
             </RmdbHeroimageText>
-        </rmdbHeroimageContent>
+        </RmdbHeroimageContent>
     </RmdbHeroImage>
 )
 HeroImage.propTypes={
@@ -26,3 +26,4 @@ HeroImage.propTypes={
     title: PropTypes.string,
     text: PropTypes.string
 }
+export default HeroImage

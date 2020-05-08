@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {RmdbLoadMoreBtn} from './LoadMoreBtn'
-export const LoadMorBtn=({text, onClick})=>(
+
+export const LoadMoreBtn=({text, onClick})=>(
     <RmdbLoadMoreBtn onClick={onClick}>
         <p>{text}</p>
     </RmdbLoadMoreBtn>
 )
-LoadMorBtn.propTypes={
+export default LoadMoreBtn
+LoadMoreBtn.propTypes={
     text: PropTypes.string,
     onClick: PropTypes.func
 }

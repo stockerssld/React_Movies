@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {Clickable,RmbdbMovieThumb} from './MovieThumnb'
 
-export default MovieThum=({image, movieId,movieName, clickable})=>(
+const MovieThum=({image, movieId,movieName, clickable})=>(
     <RmbdbMovieThumb>
         {
             clickable ?
@@ -16,6 +16,7 @@ export default MovieThum=({image, movieId,movieName, clickable})=>(
         }
     </RmbdbMovieThumb>
 )
+export default MovieThum
 
 MovieThum.propTypes={
     image: PropTypes.string,

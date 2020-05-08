@@ -17,11 +17,6 @@ export const RmdbGridContent= styled.div`
         grid-template-columns: auto auto;
     }
 `
-export const RmdbGridElements = styled.div`
-    margin: 0 40px 40px 0;
-    background: #353535;
-    max-height: ${animateGrid} 0.5;
-`
 
 const animateGrid = keyframes`
     from {
@@ -31,7 +26,14 @@ const animateGrid = keyframes`
         opacity: 1;
     }
 ` 
-const RmdbGridElement = styled.div`
+
+export const RmdbGridElements = styled.div`
+    margin: 0 40px 40px 0;
+    background: #353535;
+    max-height: ${animateGrid} 0.5;
+`
+
+export const RmdbGridElement = styled.div`
     &:nth-child(4n+4){
         margin-right: 0;
         @media screen and (max-width: 720px){

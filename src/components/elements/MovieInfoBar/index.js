@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {FaBudget,FaRevenue,FaTime,RRmdbMovieInfoBarInfo,RmdbMovieinfobar,RmdbMovieinfobarContent,RmdbMovieinfobarContentCol} from './MovieInfoBar'
 import {calcTime, convertMoney} from './../../../helpers'
 
-export const MovieInfoBar=({time, budget, revenue})=>(
+const MovieInfoBar=({time, budget, revenue})=>(
     <RmdbMovieinfobar>
         <RmdbMovieinfobarContent>
             <RmdbMovieinfobarContentCol>
@@ -21,7 +21,7 @@ export const MovieInfoBar=({time, budget, revenue})=>(
         </RmdbMovieinfobarContent>
     </RmdbMovieinfobar>
 )
-
+export default MovieInfoBar
 MovieInfoBar.propTypes={
     time: PropTypes.number,
     budget: PropTypes.number,

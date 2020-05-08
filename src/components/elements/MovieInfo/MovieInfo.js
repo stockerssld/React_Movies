@@ -1,6 +1,15 @@
 import styled, {keyframes} from 'styled-components'
 import FontAwesome from 'react-fontawesome'
 
+
+const Animatemovieinfo = keyframes`
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+`
 export const RmdbMovieinfo = styled.div`
     background: cover !important;
     background-position: center !important;
@@ -9,14 +18,6 @@ export const RmdbMovieinfo = styled.div`
     padding: 40px 20px; 
     box-sizing: border-box;
     animation: ${Animatemovieinfo} 1s;
-`
-const Animatemovieinfo = keyframes`
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
 `
 export const RmdbMovieinfoContent = styled.div`
     max-width: 1280px;

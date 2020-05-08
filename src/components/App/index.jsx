@@ -6,7 +6,7 @@ import Home from '../Home'
 import Movie from '../Movie'
 import NotFound from '../elements/NotFoud'
 
-export const App=()=>(
+const App=()=>(
     <BrowserRouter>
         <>
         <Header/>
@@ -18,3 +18,4 @@ export const App=()=>(
         </>
     </BrowserRouter>
 )
+export default App

@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import {RmdbNavigation,RmdbNavigationContent} from './Navigation'
 
-export const Navigation=({movie})=>(
+const Navigation=({movie})=>(
     <RmdbNavigation>
         <RmdbNavigationContent>
            <Link to='/'>
@@ -14,7 +14,7 @@ export const Navigation=({movie})=>(
         </RmdbNavigationContent>
     </RmdbNavigation>
 )
-
+export default Navigation
 Navigation.prototype={
     movie: PropTypes.string
 }

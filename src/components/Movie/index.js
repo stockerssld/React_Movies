@@ -8,14 +8,16 @@ import Actor from './../elements/Actor'
 import FourColGrid from './../elements/FourColGrid'
 
 import {RmdbMovie,RmdbMovieGrid} from './Movie'
+
 let initialState={
     movie: null,
     actors: null,
     directors:[],
     loading: false
 }
-export function Movie(props){
-    [state, setState]=useState(initialState)
+export default function Movie(props){
+   
+    const [state, setState]=useState(initialState)
 
     useEffect(()=>{
         const {movieId}= props.match.params
@@ -30,7 +32,7 @@ export function Movie(props){
         }
     },[])
 
-    fetchItems=()=>{
+    const fetchItems=(endpoint)=>{
         const {movieId} = props.match.params
 
         fetch(endpoint)
@@ -45,7 +47,7 @@ export function Movie(props){
                     const directors = result.crew.filter((member)=>member.job==="Director")
 
                     setState({...state, actors: result.cast, directors, loading:false},()=>{
-                        localStorage.setItem(`${movi}`, JSON.stringify(state))
+                        localStorage.setItem(`${movie}`, JSON.stringify(state))
                     })
                 })
             })

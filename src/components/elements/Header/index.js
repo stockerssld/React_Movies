@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {RmdbHeader,RmdbHeaderContent,RmdbLogo,RmdbTmdbLogo} from './Header'
 
-export const Header =()=>(
+const Header =()=>(
     <RmdbHeader>
         <RmdbHeaderContent>
             <Link to='/'>
@@ -12,3 +12,5 @@ export const Header =()=>(
         </RmdbHeaderContent>
     </RmdbHeader>
 )
+
+export default Header
